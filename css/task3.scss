@@ -1,0 +1,41 @@
+@import '_task1';
+@import '_task2';
+
+$secondary: complement($primary);
+
+$all-colors:(
+    1:$red,
+    2:$blue,
+    3:$green,
+    4:$primary,
+    5:$secondary
+);
+
+    @each $index, $colour in $all-colors{
+
+        .display-#{$index}{
+            background-color: $colour;
+            height: 100px;
+            width: 1fr;
+        }
+
+        .light-display-#{$index}{
+            background-color: lighten($colour, 20%);
+            height: 100px;
+            width: 1fr;
+        }
+
+        .dark-display-#{$index}{
+            background-color: darken($colour, 20%);
+            height: 100px;
+            width: 1fr;
+        }
+    }
+
+
+    
+
+main{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}

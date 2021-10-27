@@ -1,0 +1,69 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+// BREAKPOINTS
+$desktop: 996px;
+$tablet: 766px;
+
+// COLOURS
+
+
+$breakpoints:(
+    medium:$tablet,
+    large: $desktop
+);
+
+
+
+
+
+//MAIN CONTENT
+
+
+
+//MOBILE
+form{
+    background-color: cadetblue;
+
+    display: grid;
+    grid-template-columns: 100vw;
+    justify-content: center;
+
+    h3{
+        text-align: center;
+    }
+
+    input,label {
+        padding: 5px;
+        margin: 5px;
+        text-align: center;
+    }
+
+}
+
+// tablet
+@media only screen and (min-width: map-get($breakpoints, 'medium') ) {
+    form{
+        grid-template-columns: 70vw;
+    }
+}
+
+
+// DESKTOP
+@media only screen and (min-width: map-get($breakpoints, 'large')) {
+    form{
+
+        grid-template-columns: repeat(5, 1fr);
+        text-align: center;
+        justify-content: center;
+
+        h3{
+            grid-column: 1/-1;
+        }
+
+
+    }
+}

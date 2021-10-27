@@ -1,0 +1,21 @@
+// enter desired colour
+$primary: orange;
+
+
+// no touchy
+@mixin scheme($colour){
+    .primary{
+        background-color: $colour
+    }
+
+    .secondary{
+        background-color: complement($colour);
+    }
+}
+
+@include scheme($primary);
+
+.box{
+    width: 50px;
+    height: 50px;
+}

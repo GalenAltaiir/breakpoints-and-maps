@@ -1,0 +1,51 @@
+.box {
+  width: 50px;
+  height: 50px;
+}
+
+.box, .box.colour-normal {
+  background: blue;
+}
+
+.box, .box.colour-lighter {
+  background: #6666ff;
+}
+
+.box, .box.colour-darker {
+  background: #000099;
+}
+
+.box2 {
+  width: 50px;
+  height: 50px;
+}
+
+.box2, .box2.colour-normal {
+  background: red;
+}
+
+.box2, .box2.colour-lighter {
+  background: #ff6666;
+}
+
+.box2, .box2.colour-darker {
+  background: #990000;
+}
+
+.box3 {
+  width: 50px;
+  height: 50px;
+}
+
+.box3, .box3.colour-normal {
+  background: green;
+}
+
+.box3, .box3.colour-lighter {
+  background: #00e600;
+}
+
+.box3, .box3.colour-darker {
+  background: #001a00;
+}
+/*# sourceMappingURL=task1.css.map */

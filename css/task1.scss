@@ -1,0 +1,36 @@
+$blue: blue;
+$red: red;
+$green: green;
+
+@mixin lightness($color){
+    &, &.colour-normal{
+        background: $color;
+    }
+
+    &, &.colour-lighter{
+        background: lighten($color, 20%);
+    }
+
+    &, &.colour-darker{
+        background: darken($color, 20%);
+    }
+}
+
+// INCLUDE Part 1
+.box{
+    @include lightness($blue);    
+    width: 50px;
+    height: 50px;
+}
+
+.box2{
+    @include lightness($red);    
+    width: 50px;
+    height: 50px;
+}
+
+.box3{
+    @include lightness($green);    
+    width: 50px;
+    height: 50px;
+}
